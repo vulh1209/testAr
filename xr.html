@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>XR.js | FBX Model</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link type="text/css" rel="stylesheet" href="/css/main.css">
+	</head>
+	<body>
+
+		
+
+<script type="module">import * as XR from './XR.js';
+
+new XR.Reality();
+new XR.Floor();
+new XR.Light();
+
+// load model
+new XR.Model({
+	file: 'https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf',
+	scale:0.015,
+});
+</script>
+			
+	</body>
+</html>
