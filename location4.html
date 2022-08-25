@@ -8,7 +8,7 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script>
       window.onload = () => {                       navigator.geolocation.getCurrentPosition((position) => {
-        document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
+        document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude+0.0004}; longitude: ${position.coords.longitude+0.0004};`)
       });
      }
     </script>
@@ -23,11 +23,6 @@
         <a-assets>
         <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
       </a-assets>
-      <a-text
-        value="No markers around"
-        look-at="[gps-camera]"
-        scale="5 5 5"
-      ></a-text>
       <a-entity
                 gltf-model="#animated-asset"
                 look-at="[gps-camera]"
