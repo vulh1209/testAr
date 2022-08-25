@@ -9,7 +9,7 @@
     <script>
       window.onload = () => {                       
           navigator.geolocation.getCurrentPosition((position) => {
-          document.querySelector('a-entity').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude+0.0004}; longitude: ${position.coords.longitude+0.0004};`)
+          document.querySelector('#model-nft').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude+0.0004}; longitude: ${position.coords.longitude+0.0004};`)
       });
      }
     </script>
@@ -25,6 +25,7 @@
         <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
       </a-assets>
       <a-entity
+      id="model-nft"
                 gltf-model="#animated-asset"
                 look-at="[gps-camera]"
                 scale="2">
