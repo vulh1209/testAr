@@ -9,7 +9,9 @@
     <script>
       window.onload = () => {                       
           navigator.geolocation.getCurrentPosition((position) => {
-          document.querySelector('a-entity').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
+              const lat = position.coords.latitude + 0.0004;
+              const long = position.coords.longitude + 0.0004;
+          document.querySelector('a-entity').setAttribute('gps-entity-place', `latitude: ${lat}; longitude: ${long};`)
       });
      }
     </script>
