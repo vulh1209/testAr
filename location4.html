@@ -9,9 +9,9 @@
     <script>
       window.onload = () => {                       
           navigator.geolocation.getCurrentPosition((position) => {
-              const lat = position.coords.latitude + 0.000004;
-              const long = position.coords.longitude + 0.000004;
-          document.querySelector('a-entity').setAttribute('gps-entity-place', `latitude: ${lat}; longitude: ${long};`)
+              const lat = position.coords.latitude + 0;
+              const long = position.coords.longitude + 0;
+          document.querySelector('a-box').setAttribute('gps-entity-place', `latitude: ${lat}; longitude: ${long};`)
       });
      }
     </script>
@@ -23,15 +23,16 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-        <a-assets>
+    <a-box position="0 1 0" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <!-- <a-assets>
         <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
-      </a-assets>
-      <a-entity
+      </a-assets> -->
+      <!-- <a-entity
                 gltf-model="#animated-asset"
                 look-at="[gps-camera]"
                 scale="2"
                 rotation="0 90 0">
-            </a-entity>
+            </a-entity> -->
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
